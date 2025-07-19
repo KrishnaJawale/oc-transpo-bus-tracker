@@ -1,0 +1,198 @@
+/*all*/
+* {
+  font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 50px;
+  text-align: center;
+  color: lightgreen;
+}
+
+.heading {
+  width:100%;
+  background-color: #3d475a;
+}
+
+/*input field at top of screen section*/
+.inputfield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/*buttons*/
+input{
+ /* width: 90%;*/
+  padding: 10px;
+}
+
+button {
+  background-color: lightcoral;
+
+  margin: auto;
+  padding: 12px;
+    border: none;
+}
+
+button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+/*google maps section*/
+
+#maps {
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  width: 50%;
+    padding: 200px;
+}
+
+/*body*/
+body {
+  background-color: #1d2026;
+}
+
+.textfield {
+  background-color: #FFFFFA;
+  margin: auto;
+  width: 650px;
+}
+
+/*bus data section*/
+#data {
+
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  color: navy;
+  line-height: 140%;
+}
+
+/*bus distance info section*/
+#distanceinfo, #busroutesheading {
+  color: coral;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+}
+
+
+
+/*Card testing*/
+.container {
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 7px;
+}
+
+.card {
+  background-color:#1d2026;
+  padding:12px;
+}
+
+#cardtext {
+  margin-top: 0px;
+  text-align: center;
+  color:white;
+}
+
+#cardbutton {
+  background-color: gold;
+  border-radius: 50px;
+  font-weight: 600;
+  margin: 0 auto;
+  display:block;
+}
+
+#cardbuttonred {
+  background-color: rgb(241, 99, 99);
+  border-radius: 50px;
+  font-weight: 600;
+  margin: 0 auto;
+  display:block;
+}
+
+/*accordion*/
+.accordion {
+  background-color: gold;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+/**/
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**/
+#routenumber {
+  color: gold;
+  font-size: 90px;
+  margin: 40px;
+}
+
+/*radio buttons*/
+.radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  overflow: hidden;
+}
+
+.radio_input {
+  display: none;
+}
+
+.radio_option {
+  padding: 8px 14px;
+  color: white;
+  background: #009578;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.radio_option:not(:last-of-type) {
+  border-right: 1px solid #006B56;
+}
+
+.radio_input:checked + .radio_option {
+  background: #006B56;
+}

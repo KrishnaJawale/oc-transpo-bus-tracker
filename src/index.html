@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+   
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/57982b972b.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+<body>
+    <h1>OC Transpo Bus Tracker</h1>
+
+    <div class="radio">
+        <input class="radio_input" name="datachoice" type="radio" value="chosendata1" name="radiobutton" id="data1">
+        <label class="radio_option" for="data1">Find bus routes upcoming at a certain stop</label>
+
+        <input class="radio_input" name="datachoice" type="radio" value="chosendata2" name="radiobutton" id="data2" checked>
+        <label class="radio_option" for="data2">Find all trips of a certain bus at a certain stop</label>
+
+        <input class="radio_input" name="datachoice" type="radio" value="chosendata3" name="radiobutton" id="data3">
+        <label class="radio_option" for="data3">Find all trips of all upcoming buses at a certain stop</label>
+    </div>
+
+    <div class="inputfield">
+        <div>
+            <input type="number" id="stopNo" placeholder="Enter Stop"></input>
+        </div>
+        <div>
+            <input type="number" id="routeNo" placeholder="Enter Route Number"></input>
+        </div> 
+        <div>
+            <input type="textg" id="userlocation" placeholder="Where are you?"></input>
+        </div>
+        <div>
+            <button id="stopNoSubmit" onclick=getDataType(1)>Search</button>
+        </div>
+    </div>
+
+    <div class="textfield">
+        <div class="heading">
+            <p id="busroutesheading">Bus/Routes Data</p>
+        </div>
+     
+        <div id = "data">      
+        </div>  
+
+        <br></br>
+
+        <div class="heading">
+            <p id = "distanceinfo">Bus Location and Distance Info</p>
+        </div>
+    </div>
+        
+    <div id="maps"></div>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=[SECRET_KEY]&callback=initMap">
+</script>
+</body>
+
+<script src="app.js"></script>
+</html>
