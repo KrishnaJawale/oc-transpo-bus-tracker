@@ -33,7 +33,6 @@ function getData (api_type) {
         fetch(apiUrl)
             .then( res => res.json())
             .then ( data => {
-
                 const data_display = document.getElementById("data")
                 const stop_summary_display = "";
 
@@ -84,8 +83,6 @@ function getData (api_type) {
 
         const {urlCors, url, appID, apiKey, stopNo, routeNo} = apiData
         const apiUrl = `${urlCors}${apiData.url}?appID=${apiData.appID}&apiKey=${apiData.apiKey}&stopNo=${apiData.stopNo}&routeNo=${routeNo}&format=`
-
-        console.log(apiUrl)
         
         fetch(apiUrl)
             .then( res => res.json())
@@ -131,8 +128,6 @@ function getData (api_type) {
                            <i class="fas fa-hourglass-end"></i> Approximate time until trip arrives at stop: ${trips_data[i].AdjustedScheduleTime} minutes </p>                             
                         </div>
                     </div>`
-
-                    console.log(trips_data[i]);
                 }
             })     
     }
@@ -153,8 +148,6 @@ function getData (api_type) {
         fetch(apiUrl)
             .then( res => res.json())
             .then ( data => {
-                console.log(data)
-
                 const data_display = document.getElementById("data")
                 data_display.innerHTML = ``;
                 let data_inner_html = "";
@@ -162,17 +155,13 @@ function getData (api_type) {
                 const stop_no_data = data.GetRouteSummaryForStopResult.StopNo
                 const stop_label_data = data.GetRouteSummaryForStopResult.StopDescription
                 const routes_data = data.GetRouteSummaryForStopResult.Routes.Route
-                console.log(routes_data)
-
-                /*data_display.innerHTML = `Upcoming Bus Trips for Stop #${stop_no_data}, at ${stop_label_data}<br></br>`*/
                 
                 if (routes_data.length == undefined) {
                     routes_data.length = 1;
                 }
 
                 for (let i = 0; i < routes_data.length; i++) {
-                    if (routes_data.length == 1) {
-                        
+                    if (routes_data.length == 1) {        
                         var route_no_data = routes_data.RouteNo
                         var route_heading_data = routes_data.RouteHeading
                         var nooftripsforroute = routes_data.Trips.Trip.length
@@ -285,7 +274,6 @@ function findDistance(lat, long) {
             console.log(data.routes[0].legs[0].end_address)
             let distancebuttonval = document.getElementById("distanceinfo")
 
-            console.log(1)
             distancebuttonval.innerHTML = `The buses current location is ${data.routes[0].legs[0].end_address}. It is ${data.routes[0].legs[0].distance.text} away from you`
 
             initMap(lat, long)
